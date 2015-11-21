@@ -10,7 +10,7 @@ The Watch Project is completely written in C++ 14, free and open source.
 
 You can send bug reports to <anujsinghsaharan@gmail.com> with the subject "The Watch Project Bug Report". 
 
-The author will send you cookies if you do send a bug report. [Not really, though.]
+I will send you cookies if you do send a bug report. [Not really, though.]
 
 --------------------------------------------------------------------------------------------------------------------------------
 *2015*
