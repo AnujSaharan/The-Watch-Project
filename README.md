@@ -3,7 +3,7 @@
 The following is Work In Progress v0.1 Pre Beta Aplha Amazingly Unifinished release of The Watch Project.
 No seriously, it isn't even fully built yet.
 
-The Watch Project is completely written in C++ 14 and is free and open source.
+The Watch Project is completely written in C++ 14, free and open source.
 
 --------------------------------------------------------------------------------------------------------------------------------
 ###### Bug Reporting
