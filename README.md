@@ -5,8 +5,8 @@ No seriously, it isn't even fully built yet.
 
 The Watch Project is completely written in C++ 14 and is free and open source.
 
+--------------------------------------------------------------------------------------------------------------------------------
 ###### Bug Reporting
---------------------------
 
 You can send bug reports to <anujsinghsaharan@gmail.com> with the subject "Watch Bug Report". 
 
