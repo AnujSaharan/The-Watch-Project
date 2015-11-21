@@ -1,4 +1,4 @@
-# TheWatchProject
+# The Watch Project
 
 The following is Word In Progress v0.1 release of The Watch Project.
 
@@ -13,5 +13,6 @@ Please include details such as your Operating System and Time of the day in the 
 The author will send you cookies if you do send a bug report. [Not really, though.]
 
 --------------------------------------------------------------------------------------------------------------------------------
-2015 
+2015
+
 Anuj Saharan
