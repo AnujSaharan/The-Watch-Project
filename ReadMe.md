@@ -24,7 +24,7 @@ The project is in early development stage and even though I have finalised the f
 
 **Q. Do dolphins sleep?**
 
-A. Yes, they are mammals and they do sleep.
+Yes, they are mammals and they do sleep.
 
 ---
 
