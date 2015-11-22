@@ -20,8 +20,7 @@ time(&Current_Time);
 Local_Time=localtime(&Current_Time); //Gets the Local Time
 
 Hour=(Local_Time->tm_hour); //Hour is 24 hour format to get AM or PM
-if(Hour<=12) {AM_or_PM='A';} else {AM_or_PM='P';} //A=AM and P=PM
-
+if(Hour<12) {AM_or_PM='A';} else {AM_or_PM='P';} //A=AM and P=PM
 Hour=(Local_Time->tm_hour)%12; //Gets the Hour of the Day, %12 is for 12 Hour Format
 Minute=(Local_Time->tm_min); //Gets the Minute of the Hour
 Second=(Local_Time->tm_sec); //Gets the Second of the Minute
