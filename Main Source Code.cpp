@@ -1,10 +1,10 @@
-//The Watch Project v0.2
+//The Watch Project v0.3
 
 #include <iostream>
 #include <ctime>
 #include <unistd.h>
 #include <windows.h>
-#include "config.cpp" //Not Yet Implemented
+#include "config.cpp"
 using namespace std;
 
 int Hour,Minute,Second;
@@ -89,6 +89,8 @@ for(;;)
 
 int main() //Main Function
 {
+system("mode con:cols=25 lines=11"); //Resizes the console window
+
 Time_Input();
 Time_Output();
 
