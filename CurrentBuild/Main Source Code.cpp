@@ -1,10 +1,11 @@
-//The Watch Project v0.3
+//The Watch Project v0.4
+//Main Source Code
 
 #include <iostream>
 #include <ctime>
 #include <unistd.h>
 #include <windows.h>
-#include "config.cpp"
+#include "stopwatch.cpp"
 using namespace std;
 
 int Hour,Minute,Second;
@@ -83,16 +84,22 @@ for(;;)
     cout<<"\n\n"<<Date[Date_Text-1]<<endl<<Month_Text[Month]<<endl<<Year_Prefix_Text[(Year/1000)-1]<<" "<<Year_Suffix_Text[(Year%100)-1]; //Displays the Date, "twenty two november 2015"
 
     sleep(1); //Freezes the console for a second
-    system("cls"); //Clears the screen to update the time
+    system("cls"); //Clears the screen every second to update the time
+
+    if(GetAsyncKeyState(VK_SPACE)) {StopWatch();} //Changes over to StopWatch Mode if Space is pressed
     }
+}
+
+void Main_Watch() //Displays the Day, Time and Date
+{
+system("mode con:cols=25 lines=11"); //Resizes the console window
+Time_Input();
+Time_Output();
 }
 
 int main() //Main Function
 {
-system("mode con:cols=25 lines=11"); //Resizes the console window
-
-Time_Input();
-Time_Output();
+Main_Watch();
 
 return 0;
 }
