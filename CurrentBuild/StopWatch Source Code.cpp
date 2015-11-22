@@ -1,13 +1,15 @@
-//The Watch Project v0.3
+//The Watch Project v0.4
 //StopWatch Module
 
-#include <iostream>
-#include <windows.h>
-#include <unistd.h>
 using namespace std;
+
+extern void Main_Watch(); //To access Main_Watch from this file
 
 void StopWatch()
 {
+system("cls");
+system("mode con:cols=20 lines=7"); //Resizes the console window
+
 int StopWatch_Hour=0,StopWatch_Minute=0,StopWatch_Second=0;
 
 string Hour_Text[]={"zero hours","one hour","two hours","three hours","four hours","five hours","six hours","seven hours","eight hours","nine hours","ten hours","eleven hours","twelve hours"};
@@ -27,15 +29,17 @@ string Second_Text[]={"zero seconds","one second","two seconds","three seconds",
 
 for(;;)
     {
-    cout<<Hour_Text[StopWatch_Hour]<<"\n"<<Minute_Text[StopWatch_Minute]<<"\n"<<Second_Text[StopWatch_Second];
+    cout<<Hour_Text[StopWatch_Hour]<<"\n"<<Minute_Text[StopWatch_Minute]<<"\n"<<Second_Text[StopWatch_Second]; //Displays the StopWatch Output
 
     if(StopWatch_Hour==24) {StopWatch_Hour=0;}
-    if(StopWatch_Minute==60) {StopWatch_Hour++; StopWatch_Minute=0;}
+    if(StopWatch_Minute==59) {StopWatch_Hour++; StopWatch_Minute=0;}
     if(StopWatch_Second==59) {StopWatch_Minute++; StopWatch_Second=0;}
 
     StopWatch_Second++;
 
-    sleep(1);
-    system("cls");
+    sleep(1); //Freezes the console for a second
+    system("cls"); //Clears the console screen every second to update the stopwatch
+
+    if(GetAsyncKeyState(VK_SPACE)) {Main_Watch();} //Changes over to Main Watch Mode if Space is pressed
     }
 }
