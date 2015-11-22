@@ -1,3 +1,15 @@
+**The Watch Project v0.4 Build Notes**
+
+-Implemented a new feature which allows users to press "Space" to change between watch modes.
+
+-Fixed a bug where the console was not being resized to the correct dimensions.
+
+-Updated ReadMe
+
+-Optimized Stop Watch Source Code.
+
+---
+
 **The Watch Project v0.3 Build Notes**
 
 -Implemented Console Resizing corresponding to different modes.
