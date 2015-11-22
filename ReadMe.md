@@ -57,6 +57,10 @@ Twitter: https://www.twitter.com/theAnujSaharan
 
 LinkedIn: https://in.linkedin.com/in/AnujSaharan
 
+Codeforces: http://codeforces.com/profile/AnujSaharan
+
+Hackerrank: https://www.hackerrank.com/AnujSaharan
+
 ---
 
 *The following is the v0.3 build of The Watch Project.*
