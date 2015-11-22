@@ -59,6 +59,6 @@ LinkedIn: https://in.linkedin.com/in/AnujSaharan
 
 ---
 
-*The following is the v0.4 build of The Watch Project.*
+*The following is the v0.3 build of The Watch Project.*
 
 -Anuj Saharan
