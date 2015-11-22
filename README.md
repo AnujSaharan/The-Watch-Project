@@ -2,6 +2,8 @@
 
 The Watch Project is a C++ based open source project which simulates a watch.
 
+---
+
 ####FAQ
 
 **Q. Why does the watch look so terrible?**
@@ -26,6 +28,8 @@ A. I am a 15 year old high-schooler, currently in 11th grade at The Air Force Sc
 
 A. Yes, they are mammals and they do sleep.
 
+---
+
 ####Project Suggestions
 
 You are more than welcome to review my source code and offer me suggestions to improve or optimise the current 
@@ -33,19 +37,28 @@ souce code. Refer to the 'Connect With Me' section below to well, connect with m
 
 Reach out to me if there is any feature that you think goes along with the theme of this project and you'd want me to implement. 
 
+---
+
 ####Bug Reporting
 
 You can send bug reports to <anujsinghsaharan@gmail.com> with the subject "The Watch Project Bug Report". 
 
 I will send you cookies if you do send a bug report. [Not really, though.]
 
+---
+
 ####Connect With Me
 
-Email: anujsinghsaharan@gmail.co)
+Email: anujsinghsaharan@gmail.com
+
 Facebook: https://www.facebook.com/theAnujSaharan
+
 Twitter: https://www.twitter.com/theAnujSaharan
+
 LinkedIn: https://in.linkedin.com/in/AnujSaharan
 
-The following is the v0.4 build of The Watch Project.
+---
+
+*The following is the v0.4 build of The Watch Project.*
 
 -Anuj Saharan
