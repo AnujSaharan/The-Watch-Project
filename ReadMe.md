@@ -1,5 +1,5 @@
 
-<a href="http://anujsaharan.github.io/The-Watch-Project/"><img src="https://dl.dropboxusercontent.com/s/tiss1me1whoytnm/Logo%20%5BTransparent%5D.png?dl=0" align="center" height="200" width="200" ></a>
+<a href="http://anujsaharan.github.io/The-Watch-Project/"><img src="https://dl.dropboxusercontent.com/s/tiss1me1whoytnm/Logo%20%5BTransparent%5D.png?dl=0" align="left" height="200" width="200" ></a>
 
 The Watch Project is a C++ based open source project which simulates a watch.
 
