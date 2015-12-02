@@ -1,11 +1,14 @@
-//The Watch Project v0.4
+//The Watch Project v0.5
 //Main Source Code
 
 #include <iostream>
 #include <ctime>
 #include <unistd.h>
 #include <windows.h>
+
 #include "stopwatch.cpp"
+#include "countdown.cpp"
+
 using namespace std;
 
 int Hour,Minute,Second;
@@ -46,7 +49,7 @@ string Second_Text[]={"zero seconds","one second","two seconds","three seconds",
                       "twenty one seconds","twenty two seconds","twenty three seconds","twenty four seconds","twenty five seconds","twenty six seconds","twenty seven seconds",
                       "twenty eight seconds","twenty nine seconds","thirty seconds","thirty one seconds","thirty two seconds","thirty three seconds","thirty four seconds","thirty five seconds",
                       "thirty six seconds","thirty seven seconds","thirty eight seconds","thirty nine seconds","forty seconds","forty one seconds","forty two seconds","forty three seconds",
-                      "forty four seconds","forty five seconds","forty six seconds","forty seven seconds","forty eight seconds","forty nine seconds","fifty seconds","fifty one seconds",
+                            "forty four seconds","forty five seconds","forty six seconds","forty seven seconds","forty eight seconds","forty nine seconds","fifty seconds","fifty one seconds",
                       "fifty two seconds","fifty three seconds","fifty four seconds","fifty five seconds","fifty six seconds","fifty seven seconds","fifty eight seconds","fifty nine seconds"};
 
 string Day_Text[]={"sunday","monday","tuesday","wednesday","thursday","saturday"};
@@ -62,6 +65,8 @@ string Year_Suffix_Text[]={"one","two","three","four","five","six","seven","eigh
 
 for(;;)
     {
+    system("cls"); //Clears the console screen
+
     Time_Input();
 
     if(Minute==60) {Hour++;}
@@ -81,25 +86,28 @@ for(;;)
     if(AM_or_PM=='A') {cout<<"ante meridiem";} //Displays AM or PM depending upon the time of the day
     else {cout<<"post meridiem";} //Displays AM or PM depending upon the time of the day
 
-    cout<<"\n\n"<<Date[Date_Text-1]<<endl<<Month_Text[Month]<<endl<<Year_Prefix_Text[(Year/1000)-1]<<" "<<Year_Suffix_Text[(Year%100)-1]; //Displays the Date, "twenty two november 2015"
+    cout<<"\n\n"<<Date[Date_Text-1]<<endl<<Month_Text[Month-1]<<endl<<Year_Prefix_Text[(Year/1000)-1]<<" "<<Year_Suffix_Text[(Year%100)-1]; //Displays the Date, "twenty two november two thousand fifteen"
 
-    sleep(1); //Freezes the console for a second
+    Sleep(1000); //Freezes the console for a second
     system("cls"); //Clears the screen every second to update the time
 
-    if(GetAsyncKeyState(VK_SPACE)) {StopWatch();} //Changes over to StopWatch Mode if Space is pressed
+    if(GetAsyncKeyState(VK_UP)) {CountDown();} //Changes over to CountDown Mode if "Up Arrow Key" is pressed
+    if(GetAsyncKeyState(VK_DOWN)) {StopWatch();} //Changes over to StopWatch Mode if "Down Arrow Key" is pressed
     }
 }
 
 void Main_Watch() //Displays the Day, Time and Date
 {
-system("mode con:cols=25 lines=11"); //Resizes the console window
+system("mode con:cols=28 lines=13"); //Resizes the console window
 Time_Input();
 Time_Output();
 }
 
 int main() //Main Function
 {
-Main_Watch();
+SetConsoleTitle("TWP v0.5"); //Changes text on the Title Bar of the Console Screen
+
+Main_Watch(); //All other watch modes are accessed from the Main Watch
 
 return 0;
 }
