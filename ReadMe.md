@@ -61,6 +61,6 @@ Hackerrank: https://www.hackerrank.com/AnujSaharan
 
 ---
 
-*The following is the v0.4 build of The Watch Project.*
+*The following is the v0.5 build of The Watch Project.*
 
 -Anuj
