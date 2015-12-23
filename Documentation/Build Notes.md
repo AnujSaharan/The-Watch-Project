@@ -1,4 +1,16 @@
-**The Watch Project v0.5 Build Notes**
+**The Watch Project v0.6 Release Notes**
+
+-Heavy Code Optimization
+
+-Improved Program Folder Structure/File Names
+
+-Improved the output format
+
+-Fixed various bugs in CountDown Mode
+
+---
+
+**The Watch Project v0.5 Release Notes**
 
 -Improved Screen Resizing
 
@@ -17,41 +29,41 @@
 -Fixed StopWatch Minute Text allowing it to go past thirty minutes
 
 -Fixed a bug because of which the current month was not being displayed correctly
-
 ---
 
-**The Watch Project v0.4 Build Notes**
+**The Watch Project v0.4 Release Notes**
 
--Implemented a new feature which allows users to press "Space" to change between watch modes.
+-Implemented a new feature which allows users to press "Space" to change between watch modes
 
--Fixed a bug where the console was not being resized to the correct dimensions.
+-Fixed a bug because of which the console was not being resized to the correct dimensions
 
 -Updated ReadMe
 
--Optimized Stop Watch Source Code.
+-Optimized StopWatch Source Code
 
 ---
 
-**The Watch Project v0.3 Build Notes**
+**The Watch Project v0.3 Release Notes**
 
--Implemented Console Resizing corresponding to different modes.
+-Implemented Console Resizing corresponding to different modes
 
--Implemented a new StopWatch feature.
+-Implemented StopWatch
 
--Optimized Main Source Code.
-
----
-
-**The Watch Project v0.2 Build Notes**
-
--Fixed a bug where 12 Noon was being shown as "anti meridien".
-
--Optimized Main Source Code.
+-Optimized Main Source Code
 
 ---
 
-**The Watch Project v0.1 Build Notes**
+**The Watch Project v0.2 Release Notes**
 
--Initial Build.
+-Fixed a bug because of which 12 Noon was being shown as "anti meridien"
 
--Implemented the Main Watch.
+-Optimized Main Source Code
+
+---
+
+**The Watch Project v0.1 Release Notes**
+
+-Initial Build
+
+-Implemented the Main Watch
+
