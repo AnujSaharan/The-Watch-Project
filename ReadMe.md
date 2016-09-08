@@ -1,13 +1,13 @@
 
 <a href="http://anujsaharan.github.io/The-Watch-Project/"><img src="https://dl.dropboxusercontent.com/s/tiss1me1whoytnm/Logo%20%5BTransparent%5D.png?dl=0" align="left" height="200" width="200" ></a>
 
-The Watch Project is a C++ based open source project which simulates a watch.
+The Watch Project is a C++ based open source project for Windows.
 
 ---
 
 ####FAQ
 
-**Q. Why is the motive of this project?**
+**Q. What is the motive of this project?**
 
 The following is my Class XII Computer Science project. I started working on this project purely to learn and acquaint myself with common developer practices and software industry standards, by referring to various online sources as I go on building on the project’s foundation.
 
