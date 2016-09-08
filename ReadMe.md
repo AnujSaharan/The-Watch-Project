@@ -9,19 +9,16 @@ The Watch Project is a C++ based open source project which simulates a watch.
 
 **Q. Why is the motive of this project?**
 
-I started working on this project to gain 'real development' experience, and understand problems faced by developers, developer practices and other industry standards as I go on improving the project. Therefore, my main objective is to learn about software programming as well as software documentation [which I just realised is way more difficult than programming]. 
+The following is my Class XII Computer Science project. I started working on this project purely to learn and acquaint myself with common developer practices and software industry standards, by referring to various online sources as I go on building on the project’s foundation.
+
    
-**Q. I have got this really cool suggestion that can help you improve this project/your programming. How do I contact you?**
+**Q. Are there any dependancies that fuel this project?**
 
-Refer to the 'Connect with Me' section. 
-
-**Q.  Who is Anuj Saharan and how long has he been programming?**
-
-I am a 15 year old high-schooler, currently in 11th grade at The Air Force School, New Delhi, India. Even though I started programming in Visual Basic and HTML 4 years back, I only started learning programming in C++ this year in March. I got into competitive programming in August of this year, and got fascinated with software development and documentation just a while back. 
+The Watch Project makes use of the CTime library for time input purposes, as well as the <windows.h> header to efficiently draw the watch onto the console.
 
 **Q. Why is the watch implemented in a console and not a graphics library?**
 
-The project is in early development stage and even though I have finalised the final interface of the project [which by the way, is not a console], I am still learning how to effectively create GUIs and port projects outside a console.
+As a novice programmer, I am still learning how to effectively create GUIs using graphics libraries and thus, a console seems to be a very apt placeholder.
 
 **Q. Do dolphins sleep?**
 
@@ -31,21 +28,11 @@ Yes, they are mammals and they do sleep.
 
 ####Project Suggestions
 
-You are more than welcome to review my source code and offer me suggestions to improve or optimise the current source code. Refer to the 'Connect with Me' section below to well, connect with me.  
-
-Reach out to me if there is any feature that you think goes along with the theme of this project and you'd want me to implement.
+I’d be honoured if you decide spend a few minutes of your time to review my current source code to suggest ways to improve and/or optimise my project. You can reach out to me at the addresses given in the ‘Contact Me’ section.
 
 ---
 
-####Bug Reporting
-
-You can send bug reports to anujsinghsaharan@gmail.com with the subject "The Watch Project Bug Report".
-
-I will send you cookies if you do send a bug report. [Not really, though.] 
-
----
-
-####Connect With Me
+####Contact Me
 
 Email: anujsinghsaharan@gmail.com
 
@@ -55,12 +42,6 @@ Twitter: https://www.twitter.com/theAnujSaharan
 
 LinkedIn: https://in.linkedin.com/in/AnujSaharan
 
-Codeforces: http://codeforces.com/profile/AnujSaharan
-
-Hackerrank: https://www.hackerrank.com/AnujSaharan
-
 ---
 
-*The following is the v0.5 build of The Watch Project.*
-
--Anuj
+*The following is the v0.6 build of The Watch Project.*
