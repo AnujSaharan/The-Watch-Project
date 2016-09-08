@@ -1,5 +1,5 @@
 
-<a href="http://anujsaharan.github.io/The-Watch-Project/"><img src="http://imgur.com/a/dcOIu" align="left" height="200" width="200" ></a>
+<a href="http://anujsaharan.github.io/The-Watch-Project/"><img src="http://i.imgur.com/5SIRjib.png" align="left" height="200" width="200" ></a>
 
 The Watch Project is a C++ based open source project for Windows.
 
