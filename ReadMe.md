@@ -28,7 +28,7 @@ Yes, they are mammals and they do sleep.
 
 ###Project Suggestions
 
-I’d be honoured if you decide spend a few minutes of your time to review my current source code to suggest ways to improve and/or optimise my project. You can reach out to me at the addresses given in the ‘Contact Me’ section.
+I’d be honoured if you decide spend a few minutes of your time to review my current source code to suggest ways to improve and/or optimise my project. You can reach out to me at the addresses given in the ‘Contact Me’ section. 
 
 ---
 
@@ -44,4 +44,4 @@ LinkedIn: https://in.linkedin.com/in/AnujSaharan
 
 ---
 
-*The following is the v0.6 build of The Watch Project.*
+*The following is the v1.0 build of The Watch Project.*
