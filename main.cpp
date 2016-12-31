@@ -1,173 +1,51 @@
-// The Watch Project v0.6
+// The Watch Project v1.0
 // Main Source Code
 
-#include <iostream>
-#include <ctime>
-#include <unistd.h>
-#include <windows.h>
+#include "helper.h"
+#include "watch.h"
 
-#include "stopwatch.cpp"
-#include "countdown.cpp"
-#include "consoleformat.cpp"
-
-int Hour, Minute, Second;
-int Date, Month, Year, Day_Of_Week;
-char AM_or_PM;
-
-std::string Numbers_Text[] = {
-    "zero",        "one",        "two",          "three",        "four",
-    "five",        "six",        "seven",        "eight",        "nine",
-    "ten",         "eleven",     "twelve",       "thirteen",     "fourteen",
-    "fifteen",     "sixteen",    "seventeen",    "eighteen",     "nineteen",
-    "twenty",      "twenty one", "twenty two",   "twenty three", "twenty four",
-    "twenty five", "twenty six", "twenty seven", "twenty eight", "twenty nine",
-    "thirty",      "thirty one", "thirty two",   "thirty three", "thirty four",
-    "thirty five", "thirty six", "thirty seven", "thirty eight", "thirty nine",
-    "forty",       "forty one",  "forty two",    "forty three",  "forty four",
-    "forty five",  "forty six",  "forty seven",  "forty eight",  "forty nine",
-    "fifty",       "fifty one",  "fifty two",    "fifty three",  "fifty four",
-    "fifty five",  "fifty six",  "fifty seven",  "fifty eight",  "fifty nine",
-    "sixty"};
-
-void Time_Input()  // Date and Time Input using CTime
+void display_info()
 {
-  time_t Current_Time;
-  struct tm* Local_Time;
+    while (!GetAsyncKeyState(VK_RETURN)) {
+        std::cout << "" << std::endl;
+        std::cout << "The Watch Project";
+        std::cout << "" << std::endl;
 
-  time(&Current_Time);
-  Local_Time = localtime(&Current_Time);
+        std::cout << "Main Screen Options:" << std::endl;
+        std::cout << "UP      --> Countdown Timer" << std::endl;
+        std::cout << "DOWN    --> Stopwatch" << std::endl;
+        std::cout << "ESC     --> Exit" << std::endl;
+        std::cout << "" << std::endl;
 
-  Hour = (Local_Time->tm_hour);
-  if (Hour < 12) {
-    AM_or_PM = 'A';
-  } else {
-    AM_or_PM = 'P';
-  }  // A=AM and P=PM
+        std::cout << "Countdown Timer Options:" << std::endl;
+        std::cout << "LEFT     --> Previous Value" << std::endl;
+        std::cout << "RIGHT    --> Next Value" << std::endl;
+        std::cout << "ENTER    --> Save Value" << std::endl;
+        std::cout << "" << std::endl;
 
-  Hour = (Local_Time->tm_hour) % 12;
-  Minute = (Local_Time->tm_min);
-  Second = (Local_Time->tm_sec);
+        std::cout << "Stopwatch Options:" << std::endl;
+        std::cout << "UP       --> Main Screen" << std::endl;
+        std::cout << "SPACEBAR --> Svae to file in Numerics" << std::endl;
+        std::cout << "RIGHT CONTROL  --> Save to file in Words" << std::endl;
+        std::cout << "" << std::endl;
 
-  Day_Of_Week = (Local_Time->tm_wday);
-  Date = (Local_Time->tm_mday);
-  Month = (Local_Time->tm_mon + 1);
-  Year = (Local_Time->tm_year + 1900);
+        std::cout << "Press ENTER to continue" << std::endl;
+        Sleep(1000);
+
+        system("cls");
+    }
 }
 
-inline void MainWatch_Mode_Switcher() {
-  if (GetAsyncKeyState(VK_UP)) {
-    CountDown();
-  }  // Changes over to CountDown Mode if "Up Arrow Key" is pressed
-  if (GetAsyncKeyState(VK_DOWN)) {
-    StopWatch();
-  }  // Changes over to StopWatch Mode if "Down Arrow Key" is pressed
-}
-
-inline void Suffix_s(int Time_Entity, unsigned int Max_Value)
-// Adds an 's' to end the of hour,minute or second if they are not 1
+int main()
 {
-  if ((Time_Entity % Max_Value) != 1) {
-    std::cout << "s";
-  }
-  std::cout << "\n";
-}
+    // Shows the help screen
+    display_info();
 
-void Time_Output() {
-  std::string Day_Text[] = {"sunday",   "monday", "tuesday",  "wednesday",
-                            "thursday", "friday", "saturday", "sunday"};
+    // Sets console size, console title and hides cursor
+    Helper::Console_Formatting();
 
-  std::string Month_Text[] = {"january",   "february", "march",    "april",
-                              "may",       "june",     "july",     "august",
-                              "september", "october",  "november", "december"};
+    // Starts the main watch
+    Watch().Time_Output();
 
-  for (;;) {
-    system("cls");  // Clears the console screen
-
-    Time_Input();
-
-    if (Minute == 60) {
-      Hour++;
-    }
-    if (Second == 60) {
-      Minute++;
-    }
-    if ((Hour == 12) && (AM_or_PM = 'A')) {
-      Date++;
-    }
-
-    std::cout << Day_Text[Day_Of_Week] << "\n\n";
-
-    if (Minute == 0)  //"twelve o' clock and thirty seconds"
-    {
-      std::cout << Numbers_Text[Hour] << " o' clock and\n"
-                << Numbers_Text[Second] << " second";
-      Suffix_s(Second, 60);
-    }
-
-    if (((Minute > 0) && (Minute <= 30)) &&
-        (Second == 0))  //"twenty minutes past twelve"
-    {
-      std::cout << Numbers_Text[Minute] << " minute";
-      Suffix_s(Minute, 60);
-      std::cout << "\npast\n" << Numbers_Text[Hour];
-    }
-
-    if (((Minute > 0) && (Minute <= 30)) &&
-        (Second > 0))  //"twenty minutes and thirty seconds past twelve"
-    {
-      std::cout << Numbers_Text[Minute] << " minute";
-      Suffix_s(Minute, 60);
-
-      std::cout << "and " << Numbers_Text[Second] << " second";
-      Suffix_s(Second, 60);
-
-      std::cout << "past " << Numbers_Text[Hour];
-    }
-
-    if (((Minute > 30) && (Minute <= 60)) &&
-        (Second == 0))  //"forty minutes to twelve"
-    {
-      std::cout << Numbers_Text[60 - Minute] << " minute";
-      Suffix_s(60 - Minute, 60);
-      std::cout << "to\n" << Numbers_Text[Hour + 1] << "\n";
-    }
-
-    if (((Minute > 30) && (Minute <= 60)) &&
-        (Second > 0))  //"forty minutes and one second to six"
-    {
-      std::cout << Numbers_Text[60 - Minute] << " minute";
-      Suffix_s(60 - Minute, 60);
-
-      std::cout << "and " << Numbers_Text[60 - Second] << " second";
-      Suffix_s(60 - Second, 60);
-      std::cout << "to " << Numbers_Text[Hour + 1] << "\n";
-    }
-
-    if (AM_or_PM == 'A') {
-      std::cout << "\nante meridiem\n";
-    } else {
-      std::cout << "\npost meridiem\n";
-    }
-
-    std::cout << "\n" << Numbers_Text[Date] << "\n" << Month_Text[Month - 1]
-              << "\n" << Numbers_Text[(Year / 1000)] << " thousand and "
-              << Numbers_Text[(
-                     Year % 100)];  //"twenty two november two thousand fifteen"
-
-    Sleep(1000);
-
-    MainWatch_Mode_Switcher();
-  }
-}
-
-void Main_Watch()  // Displays the Day, Time and Date
-{
-  Time_Input();
-  Time_Output();
-}
-
-int main() {
-  Console_Formatting();
-  Main_Watch();  // All other watch modes are accessed from the Main Watch
-  return 0;
+    return 0;
 }

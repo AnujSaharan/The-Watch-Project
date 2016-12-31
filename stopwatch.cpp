@@ -1,55 +1,89 @@
-// The Watch Project v0.6
-// StopWatch Module
+// The Watch Project v1.0
+// Stopwatch Mode
 
-#include <iostream>
-#include <unistd.h>
-#include <windows.h>
+#include "stopwatch.h"
 
-extern void Main_Watch();  // To access Main_Watch from this file
-extern void CountDown();   // To access CountDown from this file
-extern inline void Suffix_s(int Time_Entity, unsigned int Max_Value);
-
-extern std::string Numbers_Text[];
-
-int StopWatch_Hour = 0, StopWatch_Minute = 0, StopWatch_Second = 0;
-
-void StopWatch_Mode_Switcher() {
-  if (GetAsyncKeyState(VK_UP)) {
-    Main_Watch();
-  }  // Changes over to Main Watch Mode if "Up Arrow Key" is pressed
-  if (GetAsyncKeyState(VK_DOWN)) {
-    CountDown();
-  }  // Changes over to CountDown Mode if "Down Arrow Key" is pressed
+Stopwatch::Stopwatch()
+{
+    StopWatch_Hour = 0, StopWatch_Minute = 0, StopWatch_Second = 0;
+    Lap_Time_Counter = 1;
 }
 
-void StopWatch() {
-  for (;;) {
-    system("cls");  // Clears the console screen
-
-    std::cout << "\t StopWatch\n";
-
-    std::cout << "\n\n\n\n" << Numbers_Text[StopWatch_Hour % 24]
-              << " hour";  // Displays the hour
-    Suffix_s(StopWatch_Hour, 24);
-
-    std::cout << Numbers_Text[StopWatch_Minute % 60] << " minute";
-    Suffix_s(StopWatch_Minute, 60);
-
-    std::cout << Numbers_Text[StopWatch_Second % 60]
-              << " second";  // Displays the StopWatch Output
-    Suffix_s(StopWatch_Second, 60);
-
-    if ((StopWatch_Minute % 60) == 59) {
-      StopWatch_Hour++;
-    }
-    if ((StopWatch_Second % 60) == 59) {
-      StopWatch_Minute++;
+// Adds an 's' to end the of hour,minute or second if they are not 1
+char Stopwatch::Suffix_s_to_file(int Time_Entity, unsigned int Max_Value)
+{
+    if ((Time_Entity % Max_Value) != 1) {
+        return 's';
     }
 
-    StopWatch_Second++;
+    return 0;
+}
 
-    Sleep(1000);
+void Stopwatch::Lap_Time_1() //Saves the lap time in numerics
+{
+    std::ofstream file("StopWatch Lap Times.txt", std::ios::app);
 
-    StopWatch_Mode_Switcher();
-  }
+    file << Lap_Time_Counter << ". ";
+
+    file << StopWatch_Hour << ":";
+    file << StopWatch_Minute << ":";
+    file << StopWatch_Second;
+
+    file << "\n";
+    Lap_Time_Counter++;
+}
+
+void Stopwatch::Lap_Time_2() //Saves the lap time in words
+{
+    std::ofstream file("StopWatch Lap Times.txt", std::ios::app);
+
+    file << Lap_Time_Counter << ". ";
+
+    file << Helper::Numbers_Text[StopWatch_Hour % 24] << " hour";
+    file << Suffix_s_to_file(StopWatch_Hour, 24) << " ";
+
+    file << Helper::Numbers_Text[StopWatch_Minute % 60] << " minute";
+    file << Suffix_s_to_file(StopWatch_Minute, 60) << " and ";
+
+    file << Helper::Numbers_Text[StopWatch_Second % 60] << " second";
+    file << Suffix_s_to_file(StopWatch_Second, 60);
+
+    file << "\n";
+    Lap_Time_Counter++;
+}
+
+void Stopwatch::Start()
+{
+    while (!GetAsyncKeyState(VK_UP)) {
+        system("cls"); // Clears the console screen
+
+        std::cout << "\t StopWatch\n";
+
+        std::cout << "\n\n\n\n" << Helper::Numbers_Text[StopWatch_Hour % 24]
+                  << " hour"; // Displays the hour
+        Helper::Suffix_s(StopWatch_Hour, 24);
+
+        std::cout << Helper::Numbers_Text[StopWatch_Minute % 60] << " minute";
+        Helper::Suffix_s(StopWatch_Minute, 60);
+
+        std::cout << Helper::Numbers_Text[StopWatch_Second % 60]
+                  << " second"; // Displays the StopWatch Output
+        Helper::Suffix_s(StopWatch_Second, 60);
+
+        if ((StopWatch_Minute % 60) == 59) {
+            StopWatch_Hour++;
+        }
+        if ((StopWatch_Second % 60) == 59) {
+            StopWatch_Minute++;
+        }
+        if ((StopWatch_Second % 60) == 59) {
+            StopWatch_Second = 0;
+        }
+
+        StopWatch_Second++;
+
+        Sleep(1000);
+
+        Save_To_File();
+    }
 }
