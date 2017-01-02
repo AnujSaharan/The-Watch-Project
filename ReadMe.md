@@ -34,13 +34,13 @@ I’d be honoured if you decide spend a few minutes of your time to review my cu
 
 ###Contact Me
 
-Email: anujsinghsaharan@gmail.com
+**Email:** anujsinghsaharan@gmail.com
 
-Facebook: https://www.facebook.com/theAnujSaharan
+**Facebook:** https://www.facebook.com/theAnujSaharan
 
-Twitter: https://www.twitter.com/theAnujSaharan
+**Twitter:** https://www.twitter.com/theAnujSaharan
 
-LinkedIn: https://in.linkedin.com/in/AnujSaharan
+**LinkedIn:** https://in.linkedin.com/in/AnujSaharan
 
 ---
 
