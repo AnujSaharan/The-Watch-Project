@@ -5,7 +5,7 @@ The Watch Project is a C++ based open source project for Windows.
 
 ---
 
-###FAQ
+### FAQ
 
 **Q. What is the motive of this project?**
 
@@ -26,13 +26,13 @@ Yes, they are mammals and they do sleep.
 
 ---
 
-###Project Suggestions
+### Project Suggestions
 
 I’d be honoured if you decide spend a few minutes of your time to review my current source code to suggest ways to improve and/or optimise my project. You can reach out to me at the addresses given in the ‘Contact Me’ section. 
 
 ---
 
-###Contact Me
+### Contact Me
 
 **Email:** anujsinghsaharan@gmail.com
 
