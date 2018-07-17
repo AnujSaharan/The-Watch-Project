@@ -14,7 +14,7 @@ The following is my Class XII Computer Science project. I started working on thi
    
 **Q. Are there any dependancies that fuel this project?**
 
-The Watch Project makes use of the CTime library for time input purposes, as well as the <windows.h> header to efficiently draw the watch onto the console.
+The Watch Project makes use of the CTime library to input system time, as well as the <windows.h> header to efficiently draw the watch onto the console.
 
 **Q. Why is the watch implemented in a console and not a graphics library?**
 
