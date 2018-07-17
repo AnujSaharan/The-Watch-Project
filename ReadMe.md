@@ -26,6 +26,9 @@ Yes, they are mammals and they do sleep.
 ### Project Screenshots
 
 <img src="https://i.imgur.com/Od3xiut.png" height="222" width="224">
+<img src="https://i.imgur.com/BgCIMXE.png" height="222" width="224">
+<img src="https://i.imgur.com/HvSAM6t.png" height="222" width="224">
+<img src="https://i.imgur.com/Dt3XiKa.png" height="222" width="224">  
 
 ---
 
