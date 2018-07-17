@@ -3,6 +3,8 @@
 
 The Watch Project is an C++ based object oriented watch that fetches time from the system and displays it in a word based format. Also includes a stopwatch and a countdown timer capable of writing and saving data to external files.
 
+I've included detailed documentation in the most recent release of the project.
+
 ---
 
 ### FAQ
@@ -11,14 +13,9 @@ The Watch Project is an C++ based object oriented watch that fetches time from t
 
 The following is my Class XII Computer Science project. I started working on this project purely to learn and acquaint myself with common developer practices and software industry standards, by referring to various online sources as I go on building on the project’s foundation.
 
-   
 **Q. Are there any dependancies that fuel this project?**
 
 The Watch Project makes use of the CTime library to input system time, as well as the <windows.h> header to efficiently draw the watch onto the console.
-
-**Q. Why is the watch implemented in a console and not a graphics library?**
-
-As a novice programmer, I am still learning how to effectively create GUIs using graphics libraries and thus, a console seems to be a very apt placeholder.
 
 **Q. Do dolphins sleep?**
 
@@ -28,7 +25,8 @@ Yes, they are mammals and they do sleep.
 
 ### Project Screenshots
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="Od3xiut"><a href="//imgur.com/Od3xiut">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+<img src="https://i.imgur.com/Od3xiut.png" height="100" width="200">
+
 ---
 
 ### Contact Me
