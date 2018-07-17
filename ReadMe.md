@@ -1,7 +1,7 @@
 
 <a href="http://anujsaharan.github.io/The-Watch-Project/"><img src="http://i.imgur.com/5SIRjib.png" align="left" height="200" width="200" ></a>
 
-The Watch Project is a C++ based open source project for Windows.
+The Watch Project is an C++ based object oriented watch that fetches time from the system and displays it in a word based format. Also includes a stopwatch and a countdown timer capable of writing and saving data to external files.
 
 ---
 
@@ -26,21 +26,18 @@ Yes, they are mammals and they do sleep.
 
 ---
 
-### Project Suggestions
+### Project Screenshots
 
-I’d be honoured if you decide spend a few minutes of your time to review my current source code to suggest ways to improve and/or optimise my project. You can reach out to me at the addresses given in the ‘Contact Me’ section. 
-
+<img src="https://imgur.com/Od3xiut"> 
 ---
 
 ### Contact Me
 
 **Email:** anuj@gatech.edu
 
-**Facebook:** https://www.facebook.com/theAnujSaharan
-
-**Twitter:** https://www.twitter.com/theAnujSaharan
-
 **LinkedIn:** https://in.linkedin.com/in/AnujSaharan
+
+**Facebook:** https://www.facebook.com/theAnujSaharan
 
 ---
 
